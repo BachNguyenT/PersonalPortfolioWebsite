@@ -1,20 +1,37 @@
 .Footer {
+  background-color: pink;
+  &__Top {
     display: flex;
     flex-direction: row;
-    background-color: red;
-
+    justify-content: space-between;
+    padding: 3rem 5rem;
+    // height: 20rem;
+    @media (max-width: 800px) {
+      flex-direction: column;
+    }
     &__Name {
-        
-        &__Title {
+        // background-color: red;
+        padding: 0;
+      &__Title {
+        font-size: 50px;
+        line-height: 35px;
+        margin-top: 1.6rem;
+      }
 
-        }
-
-        &__Icons {
-            cursor: pointer
-        }
+      &__Icons {
+        cursor: pointer;
+        margin-right: 1rem;
+      }
     }
 
     &__Navigator {
-
+      padding-right: 10%;
+    //   background-color: red;
     }
+  }
+
+  &__Bottom {
+    padding: 0rem 5rem 1rem 5rem;
+
+  }
 }

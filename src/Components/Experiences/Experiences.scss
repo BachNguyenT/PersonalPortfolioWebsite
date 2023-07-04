@@ -3,6 +3,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     height: auto;
+    background-color: #0065A2;
 }
 .modify {
     box-sizing: border-box;
@@ -12,12 +13,14 @@
     padding: 0 2rem;
     line-height: 2.5rem;
     cursor: pointer;
+    background-color: #9ad1e6;
 }
 
 .modifyd {
     box-sizing: border-box;
     border: 0.1px solid black;
     height: 50rem;
+    background-color: #9ad1e6;
     
 }
   

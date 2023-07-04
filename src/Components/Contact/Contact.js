@@ -3,6 +3,8 @@ import "./Contact.scss";
 import { Button, Form, Input } from "antd";
 
 const Contact = () => {
+  const { TextArea } = Input;
+
   const onFinish = (values) => {
     console.log("Success:", values);
   };
@@ -16,8 +18,8 @@ const Contact = () => {
       <div className="Contact__Description">
         <h1 className="Contact__Description__Title">Let's Connect!</h1>
         <p className="Contact__Description__Description">
-          Now that you've known a lot about me, let me know if you are want to
-          connect with me.
+          Now that you've known a lot about me, I am thrilled to connect with
+          you!
         </p>
       </div>
       <div className="Contact__Form">
@@ -31,7 +33,7 @@ const Contact = () => {
             span: 19,
           }}
           style={{
-            maxWidth: 450,
+            maxWidth: 570,
           }}
           initialValues={{
             remember: true,
@@ -44,8 +46,9 @@ const Contact = () => {
             label={
               <label
                 style={{
-                  color: "black",
                   fontSize: "23px",
+                  color: "rgba(54, 54, 54, 0.836)",
+                  fontFamily: "sans-serif",
                 }}
               >
                 Name
@@ -53,15 +56,22 @@ const Contact = () => {
             }
             name="Name"
           >
-            <Input styles={{ backgroundColor: "red" }} />
+            <Input
+              style={{
+                backgroundColor: "rgba(0, 0, 255, 0.075)",
+                border: "hidden",
+                boxShadow: "0 0 3px rgba(0, 0, 0, 0.2)",
+              }}
+            />
           </Form.Item>
 
           <Form.Item
             label={
               <label
                 style={{
-                  color: "black",
                   fontSize: "23px",
+                  color: "rgba(54, 54, 54, 0.836)",
+                  fontFamily: "sans-serif",
                 }}
               >
                 Email Address
@@ -69,15 +79,22 @@ const Contact = () => {
             }
             name="Email Address"
           >
-            <Input />
+            <Input
+              style={{
+                backgroundColor: "rgba(0, 0, 255, 0.075)",
+                border: "hidden",
+                boxShadow: "0 0 3px rgba(0, 0, 0, 0.2)",
+              }}
+            />
           </Form.Item>
 
           <Form.Item
             label={
               <label
                 style={{
-                  color: "black",
                   fontSize: "23px",
+                  color: "rgba(54, 54, 54, 0.836)",
+                  fontFamily: "sans-serif",
                 }}
               >
                 Message
@@ -85,7 +102,22 @@ const Contact = () => {
             }
             name="Message"
           >
-            <Input />
+            {/* <Input
+              style={{
+                backgroundColor: "rgba(0, 0, 255, 0.075)",
+                border: "hidden",
+                boxShadow: "0 0 3px rgba(0, 0, 0, 0.2)",
+              }}
+              rows={4}
+            /> */}
+            <TextArea
+              rows={5}
+              style={{
+                backgroundColor: "rgba(0, 0, 255, 0.075)",
+                border: "hidden",
+                boxShadow: "0 0 3px rgba(0, 0, 0, 0.2)",
+              }}
+            />
           </Form.Item>
 
           <Form.Item
@@ -97,7 +129,7 @@ const Contact = () => {
             <Button
               type="primary"
               htmlType="submit"
-              style={{ backgroundColor: "gray" }}
+              style={{ backgroundColor: "blue" }}
             >
               Submit
             </Button>

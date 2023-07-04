@@ -3,26 +3,32 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 5rem 20px;
-  @media (max-width: 850px) {
+  @media (max-width: 800px) {
     display: flex;
     flex-direction: column;
   }
 
   &__Description {
-    width: 40%;
+    width: 28rem;
     // background-color: red;
     padding: 0rem 0rem 5rem 2rem;
 
     @media (max-width: 850px) {
       width: 80%;
+      padding-bottom: 1rem;
+      margin: 0 auto;
     }
 
     &__Title {
       font-size: 66px;
+      color: rgb(42, 42, 42);
     }
 
     &__Description {
       font-size: 26px;
+      color: rgb(103, 103, 103);
+      line-height: 40px;
+      font-family: sans-serif;
     }
   }
 
@@ -37,4 +43,5 @@
       padding: 0 1rem;
     }
   }
+  color: rgba(189, 189, 255, 0.775)
 }

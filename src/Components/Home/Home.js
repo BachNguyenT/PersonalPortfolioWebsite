@@ -13,6 +13,7 @@ const Home = () => {
             fontWeight: "400",
             animation: "slideIn 1.5s ease-in-out",
             fontSize: "32px",
+            opacity: "1",
           }}
         >
           Hi, I'm

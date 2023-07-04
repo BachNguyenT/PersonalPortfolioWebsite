@@ -14,7 +14,7 @@ const Skills = () => {
         </p>
       </div>
       <div className="Skills__Content">
-        <div className="Skills__Content__Block" style={{background:"red",height:"50%"}}>
+        <div className="Skills__Content__Block" style={{background:"",height:"50%"}}>
           <h1 className="Skills__Content__Block__Title">Product Design</h1>
           {/* <p className="Skills__Content__Block__Detail">
             Working at Facebook has taught me a lot about how to understand
