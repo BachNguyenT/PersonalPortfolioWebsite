@@ -1,0 +1,32 @@
+.NavBar {
+  // background-color: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5rem 3rem 0.5rem 10%;
+  box-sizing: border-box;
+  border-bottom: 0.4px solid grey;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  height: 5rem;
+  align-items: center;
+
+  &__Name {
+    font-family: sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-stretch:extra-condensed;
+    color: #3a404a;
+    margin-right: auto;
+    cursor: pointer;
+  }
+
+  &__Nav {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    // background: green;
+    align-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}

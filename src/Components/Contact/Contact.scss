@@ -1,0 +1,40 @@
+.Contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 5rem 20px;
+  @media (max-width: 850px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__Description {
+    width: 40%;
+    // background-color: red;
+    padding: 0rem 0rem 5rem 2rem;
+
+    @media (max-width: 850px) {
+      width: 80%;
+    }
+
+    &__Title {
+      font-size: 66px;
+    }
+
+    &__Description {
+      font-size: 26px;
+    }
+  }
+
+  &__Form {
+    // background-color: green;
+    width: 50%;
+    font-size: 30px;
+    padding-left: 5rem;
+    align-self: center;
+    @media (max-width: 850px) {
+      width: 80%;
+      padding: 0 1rem;
+    }
+  }
+}

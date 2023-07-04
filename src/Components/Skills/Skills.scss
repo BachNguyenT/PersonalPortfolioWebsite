@@ -1,0 +1,14 @@
+.Skills {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    padding: 5rem 1rem 5rem 1rem;
+
+    &__Title {
+        padding: 5rem 1rem 0rem 1rem;
+    }
+
+    &__Content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

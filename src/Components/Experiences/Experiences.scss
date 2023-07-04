@@ -1,0 +1,30 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    height: auto;
+}
+.modify {
+    box-sizing: border-box;
+    border: 0.1px solid black;
+    height: 30rem;
+    text-align: left;
+    padding: 0 2rem;
+    line-height: 2.5rem;
+    cursor: pointer;
+}
+
+.modifyd {
+    box-sizing: border-box;
+    border: 0.1px solid black;
+    height: 50rem;
+    
+}
+  
+.grid-item {
+    background-color: #ffffff;
+    // border: 1px solid #cccccc;
+    font-size: 30px;
+    text-align: center;
+}
+  
