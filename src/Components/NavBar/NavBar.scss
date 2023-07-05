@@ -1,23 +1,35 @@
 .NavBar {
-  // background-color: red;
+  // background-color: rgb(70, 212, 198);
+  backdrop-filter: blur(5px);
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  // justify-content: space-between;
   padding: 0.5rem 3rem 0.5rem 10%;
   box-sizing: border-box;
   border-bottom: 0.4px solid grey;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   height: 5rem;
+  width: 100%;
   align-items: center;
+  position: fixed;
+  transition: transform 0.3s ease-in-out;
+  transform: (0%);
+
+  &__Hidden {
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
 
   &__Name {
-    font-family: sans-serif;
     font-size: 24px;
     font-weight: 400;
-    font-stretch:extra-condensed;
+    font-stretch: extra-condensed;
     color: #3a404a;
     margin-right: auto;
     cursor: pointer;
+    min-width: 10rem;
+    // background-color: red;
   }
 
   &__Nav {
@@ -28,5 +40,37 @@
     align-content: center;
     align-items: center;
     cursor: pointer;
+
+    &__Content {
+      @media (max-width: 800px) {
+        visibility: hidden;
+      }
+    }
+
+    &__Hamburger {
+      visibility: hidden;
+
+      @media (max-width: 800px) {
+        visibility: visible;
+        // background: red;
+        width: 1.7rem;
+        height: auto;
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__Dropdown {
+    // display: none;
+    position: absolute;
+    top: 100%;
+    left: 6rem;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: pink;
+    z-index: 9999;
+    
   }
 }

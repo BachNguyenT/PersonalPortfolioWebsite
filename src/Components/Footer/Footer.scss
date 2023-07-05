@@ -1,5 +1,10 @@
 .Footer {
   background-color: pink;
+
+  backdrop-filter: blur(5px);
+  z-index: 998;
+  opacity: 1;
+  
   &__Top {
     display: flex;
     flex-direction: row;
