@@ -1,13 +1,14 @@
 .About {
-    padding: 10rem 3rem;
-
-    background:#00B0BA;
+    padding: 10% 3rem;
+    height: auto;
+    min-height: 39.1rem;
+    background-color: white;
 
     &__Header {
-
+        font-size: 55px;
     }
 
     &__Content {
-
+        font-size: 24px;
     }
 }

@@ -1,33 +1,72 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    height: auto;
-    background-color: #0065A2;
-}
-.modify {
-    box-sizing: border-box;
-    border: 0.1px solid black;
-    height: 30rem;
-    text-align: left;
-    padding: 0 2rem;
-    line-height: 2.5rem;
-    cursor: pointer;
-    background-color: #9ad1e6;
-}
+.Experiences {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  // grid-gap: 2rem;
+  grid-template-rows: auto;
+  margin-top: 5rem;
+  height: auto;
 
-.modifyd {
-    box-sizing: border-box;
-    border: 0.1px solid black;
-    height: 50rem;
-    background-color: #9ad1e6;
-    
-}
-  
-.grid-item {
-    background-color: #ffffff;
-    // border: 1px solid #cccccc;
+  &__Grid {
+    row-gap: 14rem;
     font-size: 30px;
     text-align: center;
+
+    &__Title {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-sizing: border-box;
+      border: 0.1px solid rgb(200, 200, 200);
+      border-radius: 1px;
+      height: 30rem;
+      text-align: left;
+      padding: 1rem 2rem;
+      line-height: 2.5rem;
+      cursor: pointer;
+      background-color: white;
+    }
+
+    &__Content {
+      display: flex;
+      flex-direction: column;
+      // column-gap: 0.2rem;
+      box-sizing: border-box;
+      border: 0.1px solid rgb(200, 200, 200);
+      border-radius: 1px;
+      height: 50rem;
+      height: auto;
+      background-color: white;
+      -moz-osx-font-smoothing: grayscale;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+      transition: transform 0.25s ease-out;
+      padding: 1rem 1rem 3rem 1rem;
+      // :hover {
+      //   transform: 1.05;
+      // }
+      
+
+      &__Container {
+        margin: 0 auto;
+        &__Image {
+          box-sizing: border-box;
+          border-radius: 10px;
+          width: 100%;
+          height: auto;
+        }
+      }
+      &__Title {
+        height: 2rem;
+      }
+      &__Description {
+        margin: 0 auto;
+        width: 80%;
+        font-size: 25px;
+        margin-bottom: 1rem;
+
+        &__Text {
+        }
+      }
+    }
+  }
 }
-  

@@ -10,10 +10,10 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   height: 5rem;
   width: 100%;
+  min-width: 1rem;
   align-items: center;
   position: fixed;
-  transition: transform 0.3s ease-in-out;
-  transform: (0%);
+  z-index: 999;
 
   &__Hidden {
     transform: translateY(-100%);
@@ -48,15 +48,18 @@
     }
 
     &__Hamburger {
-      visibility: hidden;
+      // visibility: hidden;
+        width: 1.7rem;
+        height: auto;
+        transition: transform 0.3s, box-shadow 0.3s;
 
       @media (max-width: 800px) {
-        visibility: visible;
+        // visibility: visible;
         // background: red;
         width: 1.7rem;
         height: auto;
         transition: transform 0.3s, box-shadow 0.3s;
-        margin-left: auto;
+        // margin-left: auto;
       }
     }
   }

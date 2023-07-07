@@ -1,16 +1,45 @@
 .Skills {
-    display: grid;
+    // display: grid;
     grid-template-columns: 35% 65%;
-    padding: 5rem 1rem 5rem 1rem;
-    background-color: #FFD872;
-    background-color: #00DE94;
+    padding: 5rem 4rem 5rem 4rem;
+    background-color: #edf2f8;
+    height: auto;
+    
 
     &__Title {
         padding: 5rem 1rem 0rem 1rem;
+        width: 60%;
+        min-width: 500px;
+
+        &__Title {
+            font-size: 55px;
+        }
+
+        &__Description {
+            font-size: 24px;
+        }
     }
 
     &__Content {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+        @media (max-width: 800px){
+            display: grid;
+            grid-template-columns: 1fr;
+            height: auto;
+            grid-gap: 2rem;
+        }
+
+        &__Block {
+            margin: 1rem;
+            &__Title {
+                font-size: 35px;
+            }
+
+            &__Description {
+                font-size: 21px;
+            }
+        }
     }
 }

@@ -8,6 +8,8 @@ const NavBar = () => {
   const [navbarVisible, setNavbarVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
+  const [isMobileWidth, setIsMobileWidth] = useState(false);
+
   const handleMouseEnter = () => {
     setIsHovered(true);
   };
@@ -32,6 +34,24 @@ const NavBar = () => {
   };
 
   useEffect(() => {
+    const handleWindowResize = () => {
+      if (window.innerWidth < 800) {
+        setIsMobileWidth(true);
+      } else {
+        setIsMobileWidth(false);
+      }
+    };
+
+    // Add event listener for window resize
+    window.addEventListener("resize", handleWindowResize);
+
+    // Cleanup function to remove the event listener
+    return () => {
+      window.removeEventListener("resize", handleWindowResize);
+    };
+  }, []); // Empty dependency array to ensure the effect runs only once during component mounting
+
+  useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
       if (prevScrollPos > currentScrollPos) {
@@ -50,11 +70,9 @@ const NavBar = () => {
     };
   }, [prevScrollPos]);
 
-  console.log(isOpen);
-
   return (
     // <div className={`NavBar${navbarVisible ? "" : "__Hidden"}`}>
-    <div className="NavBar"> 
+    <div className="NavBar">
       <h1
         className="NavBar__Name"
         onClick={() => {
@@ -63,19 +81,47 @@ const NavBar = () => {
       >
         Bach Nguyen
       </h1>
-      <div className="NavBar__Nav">
-        <p
-          className="NavBar__Nav__Content"
-          onClick={() => {
-            handleClickScroll(80);
-          }}
-        >
-          About
-        </p>
-        <p className="NavBar__Nav__Content">Experiences</p>
-        <p className="NavBar__Nav__Content">Skills</p>
-        <p className="NavBar__Nav__Content">Contact</p>
-        {/* <button className="NavBar__Nav__Hamburger" onClick={toggleDropdown}> */}
+
+      {!isMobileWidth && (
+        <div className="NavBar__Nav">
+          <p
+            className="NavBar__Nav__Content"
+            onClick={() => {
+              handleClickScroll(
+                window.innerHeight <= 560 ? 440 : window.innerHeight - 65
+              );
+            }}
+          >
+            About
+          </p>
+          <p
+            className="NavBar__Nav__Content"
+            onClick={() => {
+              handleClickScroll(1960);
+            }}
+          >
+            Skills
+          </p>
+          <p
+            className="NavBar__Nav__Content"
+            onClick={() => {
+              handleClickScroll(3120);
+            }}
+          >
+            Experiences
+          </p>
+          <p
+            className="NavBar__Nav__Content"
+            onClick={() => {
+              handleClickScroll(2500);
+            }}
+          >
+            Contact
+          </p>
+        </div>
+      )}
+
+      {isMobileWidth && (
         <GiHamburgerMenu
           className="NavBar__Nav__Hamburger"
           onClick={toggleDropdown}
@@ -83,17 +129,16 @@ const NavBar = () => {
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         />
-        {/* </button> */}
+      )}
 
-        {isOpen && (
-          <div className="NavBar__Dropdown">
-            <p>About</p>
-            <p>Experiences</p>
+      {isOpen && (
+        <div className="NavBar__Dropdown">
+          <p>About</p>
+          <p>Experiences</p>
 
-            <p></p>
-          </div>
-        )}
-      </div>
+          <p></p>
+        </div>
+      )}
     </div>
   );
 };
