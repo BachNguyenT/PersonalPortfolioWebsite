@@ -2,7 +2,7 @@ import { useState, useEffect, React } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./NavBar.scss";
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -113,7 +113,8 @@ const NavBar = () => {
           <p
             className="NavBar__Nav__Content"
             onClick={() => {
-              handleClickScroll(2500);
+              props.handleClick();
+              console.log("HI");
             }}
           >
             Contact

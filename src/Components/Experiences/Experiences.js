@@ -21,7 +21,7 @@ const Experiences = () => {
       <div className="Experiences__Grid">
         <div
           className="Experiences__Grid__Title"
-          data-aos="fade-up-right"
+          data-aos="zoom-out"
           data-aos-duration="1500"
         >
           <p style={{ marginBottom: "-1rem" }}>Experiences</p>
@@ -29,8 +29,8 @@ const Experiences = () => {
         </div>
         <div
           className="Experiences__Grid__Content"
-          data-aos="fade-up-right"
-          data-aos-duration="1500"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
         >
           <div className="Experiences__Grid__Content__Container">
             <img
@@ -58,8 +58,8 @@ const Experiences = () => {
         </div>
         <div
           className="Experiences__Grid__Content"
-          data-aos="fade-up-right"
-          data-aos-duration="1500"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
         >
           <div className="Experiences__Grid__Content__Container">
             <img
@@ -72,6 +72,8 @@ const Experiences = () => {
                 boxSizing: "border-box",
                 borderRadius: "10px",
               }}
+              data-aos="zoom-out"
+              data-aos-duration="2000"
             />
           </div>
           <h4 className="Experiences__Grid__Content__Title">Web Developer</h4>
@@ -89,8 +91,8 @@ const Experiences = () => {
       <div className="Experiences__Grid">
         <div
           className="Experiences__Grid__Content"
-          data-aos="fade-up-left"
-          data-aos-duration="1500"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
           onClick={() =>
             handleClick(
               "https://www.cbc.ca/news/canada/new-brunswick/garbage-collection-project-saint-john-1.6576693"
@@ -115,6 +117,8 @@ const Experiences = () => {
                 boxSizing: "border-box",
                 borderRadius: "10px",
               }}
+              data-aos="zoom-out"
+              data-aos-duration="2000"
             />
           </div>
           <h4 className="Experiences__Grid__Content__Title">
@@ -132,8 +136,8 @@ const Experiences = () => {
         </div>
         <div
           className="Experiences__Grid__Content"
-          data-aos="fade-up-left"
-          data-aos-duration="1500"
+          data-aos="zoom-out"
+          data-aos-duration="2000"
         >
           <div className="Experiences__Grid__Content__Container">
             <img

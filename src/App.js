@@ -10,21 +10,22 @@ import Footer from "./Components/Footer/Footer";
 import Connect from "./Components/Connect/Connect";
 
 const App = () => {
-  const homeRef = useRef();
+  const ContactRef = useRef(null);
 
-  // const getHome = () => {
-  //   console.log(homeRef.current.offsetHeight)
-  // }
+  const handleClick = () => {
+    ContactRef.current?.scrollIntoView({behavior: 'smooth'});
+    console.log("BA");
+  };
 
   return (
     <div className="App-container">
       <div className="App">
-        <NavBar />
-        <Home ref={homeRef}/>
+        <NavBar handleClick={handleClick}/>
+        <Home />
         <About />
         <Skills />
         <Experiences />
-        <Contact />
+        <Contact ref={ContactRef}/>
         <Footer />
         {/* <Connect /> */}
       </div>

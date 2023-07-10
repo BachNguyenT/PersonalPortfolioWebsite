@@ -10,22 +10,19 @@ const Skills = () => {
 
   return (
     <div className="Skills">
-      <div
-        className="Skills__Title"
-        data-aos="fade-up"
-      >
+      <div className="Skills__Title" data-aos="fade-up">
         <h1 className="Skills__Title__Title">Skills & Leadership</h1>
         <p className="Skills__Title__Description">
-          My background includes corporate and freelance experience, with a
-          history of design projects. I have worked on nationwide and
-          international marketing and product launch campaigns for global
-          brands.
+          With extensive experiences in club leadership and professional
+          corporate roles, I possess exceptional skills in leadership, sports,
+          and professional settings. I have a proven track record of
+          successfully managing teams, achieving outstanding results, and
+          maintaining a high level of professionalism in all aspects of my work.
         </p>
       </div>
       <div className="Skills__Content">
         <div
           className="Skills__Content__Block"
-          style={{ background: "", height: "50%" }}
           data-aos="fade-up-right"
           data-aos-duration="1500"
         >
@@ -47,12 +44,12 @@ const Skills = () => {
         >
           <h1 className="Skills__Content__Block__Title">Piano</h1>
           <p className="Skills__Content__Block__Description">
-            As a devoted classical music aficionado, I have dedicated left
-            years to studying and self-teaching the piano. This pursuit has not
-            only deepened my appreciation for the art form but has also
-            instilled valuable qualities such as time management, resilience,
-            and the ability to express my emotions through the enchanting
-            melodies of romantic pieces that I hold dear.
+            As a devoted classical music aficionado, I have dedicated left years
+            to studying and self-teaching the piano. This pursuit has not only
+            deepened my appreciation for the art form but has also instilled
+            valuable qualities such as time management, resilience, and the
+            ability to express my emotions through the enchanting melodies of
+            romantic pieces that I hold dear.
           </p>
         </div>
         <div
