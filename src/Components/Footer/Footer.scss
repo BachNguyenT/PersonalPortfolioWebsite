@@ -2,7 +2,7 @@
   backdrop-filter: blur(5px);
   z-index: 998;
   opacity: 1;
-  
+
   &__Top {
     display: flex;
     flex-direction: row;
@@ -11,15 +11,21 @@
     // height: 20rem;
     @media (max-width: 800px) {
       flex-direction: column;
+      row-gap: 2rem;
     }
     &__Name {
-        // background-color: red;
-        padding: 0;
+      // background-color: red;
+      align-self: center;
+      @media (max-width: 800px) {
+        align-self: flex-start;
+      }
+      padding: 0;
       &__Title {
         font-size: 50px;
         line-height: 35px;
         margin-top: 1.6rem;
         line-height: 3.7rem;
+        cursor: pointer;
       }
 
       &__Icons {
@@ -29,13 +35,21 @@
     }
 
     &__Navigator {
+      // background-color: red;
+      align-self: center;
       padding-right: 10%;
-    //   background-color: red;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      @media (max-width: 800px) {
+        align-self: flex-start;
+        // padding-left: 1rem;
+      }
     }
   }
 
   &__Bottom {
     padding: 0rem 5rem 1rem 5rem;
-
+    line-height: 1.8rem;
   }
 }

@@ -3,8 +3,15 @@
   grid-template-columns: 1fr 1fr;
   // grid-gap: 2rem;
   grid-template-rows: auto;
-  margin-top: 5rem;
   height: auto;
+  padding: 5rem 0;
+  @media (max-width: 800px){
+      display: grid;
+      grid-template-columns: 1fr;
+      height: auto;
+      padding-bottom: 0;
+      border: none;
+  }
 
   &__Grid {
     row-gap: 14rem;
@@ -24,6 +31,10 @@
       line-height: 2.5rem;
       cursor: pointer;
       background-color: white;
+
+      @media (max-width: 800px) {
+        height: 20rem;
+      }
     }
 
     &__Content {

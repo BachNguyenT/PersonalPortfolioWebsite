@@ -1,9 +1,7 @@
 .NavBar {
-  // background-color: rgb(70, 212, 198);
   backdrop-filter: blur(5px);
   display: flex;
   flex-direction: row;
-  // justify-content: space-between;
   padding: 0.5rem 3rem 0.5rem 10%;
   box-sizing: border-box;
   border-bottom: 0.4px solid grey;
@@ -29,14 +27,12 @@
     margin-right: auto;
     cursor: pointer;
     min-width: 10rem;
-    // background-color: red;
   }
 
   &__Nav {
     display: flex;
     flex-direction: row;
     column-gap: 2rem;
-    // background: green;
     align-content: center;
     align-items: center;
     cursor: pointer;
@@ -44,36 +40,42 @@
     &__Content {
       @media (max-width: 800px) {
         visibility: hidden;
+        opacity: 0;
       }
     }
 
     &__Hamburger {
-      // visibility: hidden;
-        width: 1.7rem;
-        height: auto;
-        transition: transform 0.3s, box-shadow 0.3s;
-
-      @media (max-width: 800px) {
-        // visibility: visible;
-        // background: red;
-        width: 1.7rem;
-        height: auto;
-        transition: transform 0.3s, box-shadow 0.3s;
-        // margin-left: auto;
-      }
+      width: 1.7rem;
+      height: auto;
+      cursor: pointer;
     }
   }
 
   &__Dropdown {
-    // display: none;
+    backdrop-filter: blur(5px);
+    background-color: #edf2f8f6;
+    // background-color: red;
+    opacity: 60%;
     position: absolute;
-    top: 100%;
-    left: 6rem;
+    top: 105%;
+    right: 0;
     height: 100vh;
-    width: 100vw;
-    background-color: rgba(0, 0, 0, 0.5);
-    background-color: pink;
+    width: 50vw;
     z-index: 9999;
-    
+    transition: 5s linear ease-in-out;
+    padding: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__Content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2rem;
+    }
+
+    &__Close {
+      
+    }
   }
 }

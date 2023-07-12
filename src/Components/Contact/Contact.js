@@ -1,4 +1,4 @@
-import React from "react";
+import { React} from "react";
 import "./Contact.scss";
 import { Button, Form, Input } from "antd";
 
@@ -14,7 +14,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="Contact">
+    <div className="Contact" >
       <div className="Contact__Description">
         <h1 className="Contact__Description__Title">Let's Connect!</h1>
         <p className="Contact__Description__Description">

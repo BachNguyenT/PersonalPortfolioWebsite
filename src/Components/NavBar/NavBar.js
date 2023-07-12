@@ -1,22 +1,20 @@
 import { useState, useEffect, React } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import "./NavBar.scss";
+import { Link } from "react-scroll";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { IoMdClose } from "react-icons/io";
 
-const NavBar = (props) => {
+const NavBar = ({ handleClick }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [prevScrollPos, setPrevScrollPos] = useState(window.scrollY);
-  const [navbarVisible, setNavbarVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
-  const [isMobileWidth, setIsMobileWidth] = useState(false);
+  const [isMobileWidth, setIsMobileWidth] = useState();
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const handleClickScroll = (height) => {
     window.scrollTo({
@@ -29,10 +27,6 @@ const NavBar = (props) => {
     transform: isHovered ? "scale(1.2)" : "scale(1)",
   };
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   useEffect(() => {
     const handleWindowResize = () => {
       if (window.innerWidth < 800) {
@@ -41,37 +35,13 @@ const NavBar = (props) => {
         setIsMobileWidth(false);
       }
     };
-
-    // Add event listener for window resize
     window.addEventListener("resize", handleWindowResize);
-
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("resize", handleWindowResize);
     };
-  }, []); // Empty dependency array to ensure the effect runs only once during component mounting
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (prevScrollPos > currentScrollPos) {
-        // Scrolling up, show the navbar
-        setNavbarVisible(true);
-      } else {
-        // Scrolling down, hide the navbar
-        setNavbarVisible(false);
-      }
-      setPrevScrollPos(currentScrollPos);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [prevScrollPos]);
+  }, []);
 
   return (
-    // <div className={`NavBar${navbarVisible ? "" : "__Hidden"}`}>
     <div className="NavBar">
       <h1
         className="NavBar__Name"
@@ -84,7 +54,8 @@ const NavBar = (props) => {
 
       {!isMobileWidth && (
         <div className="NavBar__Nav">
-          <p
+          <>
+            {/* <p
             className="NavBar__Nav__Content"
             onClick={() => {
               handleClickScroll(
@@ -105,7 +76,8 @@ const NavBar = (props) => {
           <p
             className="NavBar__Nav__Content"
             onClick={() => {
-              handleClickScroll(3120);
+              handleClick();
+              // handleClickScroll(3120);
             }}
           >
             Experiences
@@ -113,31 +85,163 @@ const NavBar = (props) => {
           <p
             className="NavBar__Nav__Content"
             onClick={() => {
-              props.handleClick();
               console.log("HI");
             }}
           >
             Contact
-          </p>
+          </p> */}
+          </>
+          <Link
+            activeClass="active"
+            className="NavBar__Nav__Content"
+            to="Home"
+            spy={true}
+            smooth={true}
+            duration={700}
+          >
+            Home
+          </Link>
+          <Link
+            activeClass="active"
+            className="NavBar__Nav__Content"
+            to="About"
+            spy={true}
+            smooth={true}
+            duration={700}
+          >
+            About
+          </Link>
+
+          <Link
+            activeClass="active"
+            className="NavBar__Nav__Content"
+            to="Skills"
+            spy={true}
+            smooth={true}
+            duration={700}
+          >
+            Skills
+          </Link>
+
+          <Link
+            activeClass="active"
+            className="NavBar__Nav__Content"
+            to="Experiences"
+            spy={true}
+            smooth={true}
+            duration={700}
+          >
+            Experiences
+          </Link>
+
+          <Link
+            activeClass="active"
+            className="NavBar__Nav__Content"
+            to="Contact"
+            spy={true}
+            smooth={true}
+            duration={700}
+          >
+            Contact
+          </Link>
         </div>
       )}
 
       {isMobileWidth && (
         <GiHamburgerMenu
           className="NavBar__Nav__Hamburger"
-          onClick={toggleDropdown}
+          onClick={() => {
+            setIsOpen(!isOpen);
+          }}
           style={elementStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          onMouseEnter={() => {
+            setIsHovered(true);
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false);
+          }}
         />
       )}
 
       {isOpen && (
-        <div className="NavBar__Dropdown">
-          <p>About</p>
-          <p>Experiences</p>
+        <div className="NavBar__Dropdown" data-aos="fade-left">
+          <div className="NavBar__Dropdown__Content">
+            <Link
+              activeClass="active"
+              className="NavBar__Dropdown__Content__Sections"
+              to="Home"
+              spy={true}
+              smooth={true}
+              duration={700}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Home
+            </Link>
+            <Link
+              activeClass="active"
+              className="NavBar__Dropdown__Content__Sections"
+              to="About"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              About
+            </Link>
 
-          <p></p>
+            <Link
+              activeClass="active"
+              className="NavBar__Dropdown__Content__Sections"
+              to="Skills"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Skills
+            </Link>
+
+            <Link
+              activeClass="active"
+              className="NavBar__Dropdown__Content__Sections"
+              to="Experiences"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Experiences
+            </Link>
+
+            <Link
+              activeClass="active"
+              className="NavBar__Dropdown__Content__Sections"
+              to="Contact"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              onClick={() => {
+                setIsOpen(false);
+              }}
+            >
+              Contact
+            </Link>
+          </div>
+
+          <IoMdClose
+            className="NavBar__Dropdown__Close"
+            onClick={() => {
+              setIsOpen(false);
+            }}
+          />
         </div>
       )}
     </div>

@@ -1,4 +1,4 @@
-import { React, useEffect } from "react";
+import { React, useEffect, forwardRef } from "react";
 import "./Experiences.scss";
 import VRP from "./Unknown";
 import Culture from "./CultureIntegration.png";
@@ -17,7 +17,7 @@ const Experiences = () => {
   };
 
   return (
-    <div className="Experiences">
+    <div className="Experiences" >
       <div className="Experiences__Grid">
         <div
           className="Experiences__Grid__Title"

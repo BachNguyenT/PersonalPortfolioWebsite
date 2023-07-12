@@ -10,7 +10,7 @@ const Skills = () => {
 
   return (
     <div className="Skills">
-      <div className="Skills__Title" data-aos="fade-up">
+      <div className="Skills__Title" data-aos="fade-up" data-aos-duration="1500">
         <h1 className="Skills__Title__Title">Skills & Leadership</h1>
         <p className="Skills__Title__Description">
           With extensive experiences in club leadership and professional
