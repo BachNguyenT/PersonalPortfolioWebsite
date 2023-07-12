@@ -113,7 +113,7 @@ const Footer = () => {
           Designed & Developed from scratch by Bach Nguyen
         </p>
         <p className="Footer__Bottom__Description">
-          Using ReactJS, HTML, and CSS/SASS
+          Using ReactJS, Javascript, HTML, and CSS/SASS
         </p>
       </div>
     </div>
