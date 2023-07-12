@@ -1,5 +1,5 @@
 import "./App.scss";
-import { React, useRef, useEffect } from "react";
+import { React } from "react";
 import NavBar from "./Components/NavBar/NavBar";
 import Home from "./Components/Home/Home";
 import About from "./Components/About/About";
@@ -9,13 +9,7 @@ import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Connect from "./Components/Connect/Connect";
 import {
-  Link,
-  DirectLink,
   Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
 } from "react-scroll";
 
 const App = () => {

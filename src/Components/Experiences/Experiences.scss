@@ -4,7 +4,7 @@
   // grid-gap: 2rem;
   grid-template-rows: auto;
   height: auto;
-  padding: 5rem 0;
+  padding: 5rem 0 0 0;
   @media (max-width: 800px){
       display: grid;
       grid-template-columns: 1fr;
@@ -51,7 +51,7 @@
       backface-visibility: hidden;
       transform: translateZ(0);
       transition: transform 0.25s ease-out;
-      padding: 1rem 1rem 3rem 1rem;
+      padding: 2rem 1rem 3rem 1rem;
       // :hover {
       //   transform: 1.05;
       // }
@@ -59,13 +59,16 @@
 
       &__Container {
         margin: 0 auto;
+
         &__Image {
           box-sizing: border-box;
           border-radius: 10px;
-          width: 100%;
-          height: auto;
+          // width: 100%;
+          // height: auto;
         }
+
       }
+
       &__Title {
         height: 2rem;
       }

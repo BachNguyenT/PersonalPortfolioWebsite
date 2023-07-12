@@ -1,6 +1,6 @@
 import { React, useEffect, forwardRef } from "react";
 import "./Experiences.scss";
-import VRP from "./Unknown";
+import VRP from "./VRP.jpg";
 import Culture from "./CultureIntegration.png";
 import Badminton from "./Badminton.png";
 import FrontEnd from './Frontend.png'
@@ -112,7 +112,7 @@ const Experiences = () => {
               src={VRP}
               alt="VRP"
               style={{
-                width: "110%",
+                width: "90%",
                 height: "auto",
                 boxSizing: "border-box",
                 borderRadius: "10px",
