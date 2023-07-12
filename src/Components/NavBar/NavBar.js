@@ -9,8 +9,7 @@ import { IoMdClose } from "react-icons/io";
 const NavBar = ({ handleClick }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
-  const [isMobileWidth, setIsMobileWidth] = useState();
+  const [isMobileWidth, setIsMobileWidth] = useState(false);
 
   useEffect(() => {
     AOS.init();
@@ -26,6 +25,14 @@ const NavBar = ({ handleClick }) => {
   const elementStyle = {
     transform: isHovered ? "scale(1.2)" : "scale(1)",
   };
+
+  useEffect(() => {
+    if (window.innerWidth < 800) {
+      setIsMobileWidth(true);
+    } else {
+      setIsMobileWidth(false);
+    }
+  }, []);
 
   useEffect(() => {
     const handleWindowResize = () => {
