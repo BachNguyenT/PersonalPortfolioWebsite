@@ -3,7 +3,7 @@ import "./Experiences.scss";
 import VRP from "./VRP.jpg";
 import Culture from "./CultureIntegration.png";
 import Badminton from "./Badminton.png";
-import FrontEnd from './Frontend.png'
+import FrontEnd from "./Frontend.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -17,7 +17,7 @@ const Experiences = () => {
   };
 
   return (
-    <div className="Experiences" >
+    <div className="Experiences">
       <div className="Experiences__Grid">
         <div
           className="Experiences__Grid__Title"
@@ -60,6 +60,10 @@ const Experiences = () => {
           className="Experiences__Grid__Content"
           data-aos="zoom-out"
           data-aos-duration="2000"
+          style={{
+            cursor: "pointer",
+          }}
+          href="https://exceltech.vn/"
         >
           <div className="Experiences__Grid__Content__Container">
             <img

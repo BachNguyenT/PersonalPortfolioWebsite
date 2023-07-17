@@ -56,7 +56,7 @@ const Home = () => {
           Currently working as a Frontend Developer Intern at{" "}
           <a
             className="Home__Left__Intro__Link"
-            href="https://et-landing-page.vercel.app"
+            href="https://exceltech.vn/"
           >
             Excel Technologies
           </a>

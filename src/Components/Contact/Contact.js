@@ -48,7 +48,7 @@ const Contact = () => {
                 style={{
                   fontSize: "23px",
                   color: "rgba(54, 54, 54, 0.836)",
-                  fontFamily: "sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 Name
@@ -71,7 +71,7 @@ const Contact = () => {
                 style={{
                   fontSize: "23px",
                   color: "rgba(54, 54, 54, 0.836)",
-                  fontFamily: "sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 Email Address
@@ -94,7 +94,7 @@ const Contact = () => {
                 style={{
                   fontSize: "23px",
                   color: "rgba(54, 54, 54, 0.836)",
-                  fontFamily: "sans-serif",
+                  fontFamily: "'DM Sans', sans-serif",
                 }}
               >
                 Message
