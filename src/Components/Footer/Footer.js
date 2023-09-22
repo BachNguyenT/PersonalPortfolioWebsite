@@ -1,4 +1,4 @@
-import { useRef, React } from "react";
+import { React } from "react";
 import "./Footer.scss";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";

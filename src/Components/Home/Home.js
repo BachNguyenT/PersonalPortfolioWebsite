@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.scss";
 import Avatar from "./Avatar.png";
+import AOS from "aos";
 
 const Home = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="Home">
       <div className="Home__Left">
@@ -26,7 +31,7 @@ const Home = () => {
           style={{
             fontSize: "35px",
             animation: "slideIn 6s ease-in-out",
-            animationTimingFunction: 'cubic-bezier(0.035, 0.82, 0.865, 1)'
+            animationTimingFunction: "cubic-bezier(0.035, 0.82, 0.865, 1)",
           }}
         >
           An Aspiring Software Engineer
@@ -54,15 +59,12 @@ const Home = () => {
         </p>
         <p className="Home__Left__Intro">
           Currently working as a Frontend Developer Intern at{" "}
-          <a
-            className="Home__Left__Intro__Link"
-            href="https://exceltech.vn/"
-          >
+          <a className="Home__Left__Intro__Link" href="https://exceltech.vn/">
             Excel Technologies
           </a>
         </p>
       </div>
-      <div className="Home__Right">
+      <div className="Home__Right" data-aos="fade-left" data-aos-duration="1500">
         <img className="Home__Right__Image" src={Avatar} alt="Avatar" />
       </div>
     </div>

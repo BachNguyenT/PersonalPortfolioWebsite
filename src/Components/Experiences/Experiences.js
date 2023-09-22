@@ -1,4 +1,4 @@
-import { React, useEffect, forwardRef } from "react";
+import { React, useEffect } from "react";
 import "./Experiences.scss";
 import VRP from "./VRP.jpg";
 import Culture from "./CultureIntegration.png";

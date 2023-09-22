@@ -7,7 +7,7 @@ import Skills from "./Components/Skills/Skills";
 import Experiences from "./Components/Experiences/Experiences";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
-import Connect from "./Components/Connect/Connect";
+// import Connect from "./Components/Connect/Connect";
 import {
   Element,
 } from "react-scroll";
