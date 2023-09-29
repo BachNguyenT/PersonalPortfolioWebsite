@@ -1,9 +1,9 @@
 import { React, useEffect } from "react";
 import "./Experiences.scss";
-import VRP from "./VRP.jpg";
-import Culture from "./CultureIntegration.png";
-import Badminton from "./Badminton.png";
-import FrontEnd from "./Frontend.png";
+import VRP from "./VRP_1.avif";
+import Culture from "./CultureIntegration.avif";
+import Badminton from "./Badminton (1).avif";
+import FrontEnd from "./Frontend_1.avif";
 import AOS from "aos";
 import "aos/dist/aos.css";
 

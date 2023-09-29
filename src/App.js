@@ -8,22 +8,13 @@ import Experiences from "./Components/Experiences/Experiences";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 // import Connect from "./Components/Connect/Connect";
-import {
-  Element,
-} from "react-scroll";
+import { Element } from "react-scroll";
 
 const App = () => {
-  // const ref = useRef();
-
-  const handleClick = () => {
-    // ref.current?.scrollIntoView({behavior: 'smooth'});
-    console.log("BA");
-  };
-
   return (
     <div className="App-container">
       <div className="App">
-        <NavBar handleClick={handleClick} />
+        <NavBar />
         <Element name="Home" className="App__Element">
           <Home />
         </Element>
