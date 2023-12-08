@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
-import Avatar from "./Avatar.png";
+import Avatar from "../../Assets/Avatar.png";
 import AOS from "aos";
 
 const Home = () => {
