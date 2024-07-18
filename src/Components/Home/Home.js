@@ -60,7 +60,7 @@ const Home = () => {
           Software Engineering @{" "}
           <a
             className="Home__Left__Intro__Link"
-            href="https://www.wlu.ca/programs/business-and-economics/undergraduate/business-bba-and-computer-science-bsc/index.html"
+            href="https://www.rmit.edu.vn"
           >
             RMIT Vietnam
           </a>
