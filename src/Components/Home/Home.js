@@ -39,14 +39,16 @@ const Home = () => {
         </h1>
         {/* & Enthusiastic  */}
         <p className="Home__Left__Intro">
-          Studying Computer Science at{" "}
+          Computer Science @{" "}
           <a
             className="Home__Left__Intro__Link"
             href="https://uwaterloo.ca/future-students/programs/business-administration-computer-science-double-degree#:~:text=In%20this%20unique%20program%2C%20you,and%20social%20implications%20of%20computing."
           >
             University of Waterloo
-          </a>{" "}
-          and Business Administration at{" "}
+          </a>
+        </p>
+        <p className="Home__Left__Intro">
+          Business Administration @{" "}
           <a
             className="Home__Left__Intro__Link"
             href="https://www.wlu.ca/programs/business-and-economics/undergraduate/business-bba-and-computer-science-bsc/index.html"
@@ -55,14 +57,29 @@ const Home = () => {
           </a>
         </p>
         <p className="Home__Left__Intro">
-          Passionate in acquiring new languages, frameworks, concepts, and
-          technologies.
+          Software Engineering @{" "}
+          <a
+            className="Home__Left__Intro__Link"
+            href="https://www.wlu.ca/programs/business-and-economics/undergraduate/business-bba-and-computer-science-bsc/index.html"
+          >
+            RMIT Vietnam
+          </a>
         </p>
         <p className="Home__Left__Intro">
-          Currently working as a Frontend Developer Intern at{" "}
+          Frontend Developer Intern @{" "}
           <a className="Home__Left__Intro__Link" href="https://exceltech.vn/">
             Excel Technologies
           </a>
+        </p>
+        <p className="Home__Left__Intro">
+          Software Developer Intern @{" "}
+          <a className="Home__Left__Intro__Link" href="http://www.kng.vn">
+            KnG Technologies
+          </a>
+        </p>
+        <p className="Home__Left__Intro">
+          Passionate in acquiring new languages, frameworks, concepts, and
+          technologies.
         </p>
       </div>
       <div

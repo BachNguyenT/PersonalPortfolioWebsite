@@ -25,7 +25,7 @@ const Experiences = () => {
           data-aos-duration="1500"
         >
           <p style={{ marginBottom: "-1rem" }}>Experiences</p>
-          <h3>My Achievements in the past 3 years</h3>
+          <h3>My Achievements in High School & University</h3>
         </div>
         <div
           className="Experiences__Grid__Content"
