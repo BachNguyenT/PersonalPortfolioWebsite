@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "./Home.scss";
-import Avatar from "../../Assets/Avatar.png";
+// import Avatar from "../../Assets/Avatar.png";
+import Avatar from "../../Assets/test1.png";
 import AOS from "aos";
 
 const Home = () => {
@@ -64,7 +65,11 @@ const Home = () => {
           </a>
         </p>
       </div>
-      <div className="Home__Right" data-aos="fade-left" data-aos-duration="1500">
+      <div
+        className="Home__Right"
+        data-aos="fade-left"
+        data-aos-duration="1500"
+      >
         <img className="Home__Right__Image" src={Avatar} alt="Avatar" />
       </div>
     </div>

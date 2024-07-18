@@ -171,7 +171,11 @@ const NavBar = ({ handleClick }) => {
       )}
 
       {isOpen && (
-        <div className="NavBar__Dropdown" data-aos="fade-left">
+        <div
+          className="NavBar__Dropdown"
+          data-aos="fade-left"
+          // style={{ animation: `${isOpen ? "fadeIn" : "fadeOut"} 1s` }}
+        >
           <div className="NavBar__Dropdown__Content">
             <Link
               activeClass="active"
