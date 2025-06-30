@@ -25,161 +25,248 @@ const Skills = () => {
     },
   };
 
-  const skills = [
+  const skillCardVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut",
+      },
+    },
+  };
+
+  const personalSkills = [
     {
-      title: "Badminton",
-      description: "Through my two-year tenure as the varsity boys' team lead, encompassing coaching and competing in high-stakes provincial level championships, I diligently honed my technical prowess, tactical acumen, and transformative leadership abilities, reaching an extraordinary level of expertise in guiding and inspiring the team towards remarkable achievements including multiple championships in both singles and doubles.",
+      title: "Badminton Excellence",
+      description: "Led varsity boys' team for 2+ years, achieving multiple provincial championships. Developed exceptional tactical leadership and team management skills through high-stakes competitions.",
       icon: "🏸",
-      color: "from-blue-500 to-blue-600",
-      bgColor: "from-blue-50 to-blue-100",
+      color: "from-blue-500 to-cyan-500",
+      bgColor: "from-blue-50 to-cyan-50",
+      stats: "2+ Years Leadership",
     },
     {
-      title: "Piano",
-      description: "As a devoted classical music aficionado, I have dedicated years to studying and self-teaching the piano. This pursuit has not only deepened my appreciation for the art form but has also instilled valuable qualities such as time management, resilience, and the ability to express my emotions through the enchanting melodies of romantic pieces that I hold dear.",
+      title: "Classical Piano",
+      description: "Self-taught classical pianist with years of dedicated practice. Developed discipline, emotional expression, and time management through mastering romantic compositions.",
       icon: "🎹",
-      color: "from-purple-500 to-purple-600",
-      bgColor: "from-purple-50 to-purple-100",
+      color: "from-purple-500 to-violet-500",
+      bgColor: "from-purple-50 to-violet-50",
+      stats: "5+ Years Experience",
     },
     {
-      title: "Programming",
-      description: "My journey in programming initially fuelled with simple games like Sudoku and Count to 30. Through various projects, including a research project on Vehicle Routing Problems, hackathons, and internships as a frontend developer at a rising tech corporation, I have refined my skills and embraced a future career dedicated to programming and software developing.",
+      title: "Full-Stack Development",
+      description: "Comprehensive programming journey from simple games to complex web applications. Expertise in Vehicle Routing Problems research, hackathons, and professional frontend development.",
       icon: "💻",
-      color: "from-green-500 to-green-600",
-      bgColor: "from-green-50 to-green-100",
+      color: "from-green-500 to-emerald-500",
+      bgColor: "from-green-50 to-emerald-50",
+      stats: "15+ Projects Built",
     },
     {
-      title: "Culture Integration",
-      description: "As an international exchange student in Canada, I experienced first-hand the challenges of cultural differences and diversity. To address these issues, I founded a culture club to provide support and foster a sense of belonging for both international and indigenous students. The club served as a platform for dialogue and understanding, promoting cultural integration within our school community.",
+      title: "Cultural Leadership",
+      description: "Founded and led cultural integration clubs as an international student in Canada. Bridged gaps between international and indigenous students, fostering inclusive communities.",
       icon: "🌍",
-      color: "from-orange-500 to-orange-600",
-      bgColor: "from-orange-50 to-orange-100",
+      color: "from-orange-500 to-red-500",
+      bgColor: "from-orange-50 to-red-50",
+      stats: "100+ Students Impacted",
     },
   ];
 
-  const languages = [
-    "Python", "C/C++", "JavaScript/TypeScript", "HTML/CSS", "Solidity", "SQL", "PHP"
+  const technicalSkills = [
+    {
+      category: "Languages",
+      icon: "⚡",
+      color: "from-blue-600 to-indigo-600",
+      skills: ["Python", "C/C++", "JavaScript/TypeScript", "HTML/CSS", "Solidity", "SQL", "PHP"],
+    },
+    {
+      category: "Frameworks",
+      icon: "🚀",
+      color: "from-purple-600 to-pink-600",
+      skills: ["Next.js", "React.js", "Vue.js", "Laravel", "Bootstrap", "TailwindCSS"],
+    },
+    {
+      category: "Libraries",
+      icon: "🛠️",
+      color: "from-green-600 to-teal-600",
+      skills: ["Pandas", "NumPy", "Tensorflow", "Matplotlib", "Redux", "React Query", "ShadCN/UI", "Lucide", "Framer Motion"],
+    },
   ];
-  const frameworks = [
-    "Next.js", "React.js", "Vue.js", "Laravel", "Bootstrap", "TailwindCSS"
-  ];
-  const libraries = [
-    "Pandas", "NumPy", "Tensorflow", "Matplotlib", "Redux", "React Query", "ShadCN/UI", "Lucide", "Framer Motion"
+
+  const softSkills = [
+    { name: "Leadership", level: 95, icon: "👑" },
+    { name: "Problem Solving", level: 92, icon: "🧩" },
+    { name: "Communication", level: 88, icon: "💬" },
+    { name: "Teamwork", level: 90, icon: "🤝" },
+    { name: "Adaptability", level: 87, icon: "🌟" },
+    { name: "Creativity", level: 85, icon: "🎨" },
   ];
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
-      <div className="max-w-7xl mx-auto">
+    <div className="section-padding">
+      <div className="container-max">
         <motion.div
-          className="space-y-12"
+          className="space-y-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
         >
           {/* Header */}
-          <motion.div className="text-center" variants={itemVariants}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 gradient-text">
-              Skills & Leadership
+          <motion.div className="text-center space-y-6" variants={itemVariants}>
+            <motion.div
+              className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border border-blue-200"
+              variants={itemVariants}
+            >
+              <span className="text-2xl">⚡</span>
+              <span className="text-blue-700 font-semibold">Skills & Expertise</span>
+            </motion.div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">
+              What I Bring to the Table
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
-              With extensive experiences in club leadership and professional
-              corporate roles, I possess exceptional skills in leadership, sports,
-              and professional settings. I have a proven track record of
-              successfully managing teams, achieving outstanding results, and
-              maintaining a high level of professionalism in all aspects of my work.
+            <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+              A unique blend of technical expertise, leadership experience, and creative problem-solving abilities 
+              developed through diverse experiences in competitive sports, cultural leadership, and software development.
             </p>
           </motion.div>
 
-          {/* Technical Skills */}
-          <motion.div variants={itemVariants}>
-            <h3 className="text-2xl font-semibold text-slate-800 mb-8 text-center">
-              Technical Skills
+          {/* Personal Skills Showcase */}
+          <motion.div className="space-y-12" variants={itemVariants}>
+            <h3 className="text-3xl font-bold text-center text-slate-800 mb-8">
+              Personal Excellence & Leadership
             </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="glass-effect p-8 rounded-2xl">
-                <h3 className="text-xl font-semibold text-primary-700 mb-4">Languages</h3>
-                <div className="flex flex-wrap gap-2">
-                  {languages.map((lang) => (
-                    <span key={lang} className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full font-medium text-sm">
-                      {lang}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="glass-effect p-8 rounded-2xl">
-                <h3 className="text-xl font-semibold text-accent-700 mb-4">Frameworks</h3>
-                <div className="flex flex-wrap gap-2">
-                  {frameworks.map((fw) => (
-                    <span key={fw} className="px-4 py-2 bg-accent-100 text-accent-700 rounded-full font-medium text-sm">
-                      {fw}
-                    </span>
-                  ))}
-                </div>
-              </div>
-              <div className="glass-effect p-8 rounded-2xl">
-                <h3 className="text-xl font-semibold text-secondary-700 mb-4">Libraries</h3>
-                <div className="flex flex-wrap gap-2">
-                  {libraries.map((lib) => (
-                    <span key={lib} className="px-4 py-2 bg-secondary-100 text-secondary-700 rounded-full font-medium text-sm">
-                      {lib}
-                    </span>
-                  ))}
-                </div>
-              </div>
+            <div className="grid lg:grid-cols-2 gap-8">
+              {personalSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.title}
+                  className="group floating-card glass-effect p-8 rounded-3xl border border-white/20"
+                  variants={skillCardVariants}
+                  whileHover={{ scale: 1.02, rotateY: 5 }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div className="flex items-start gap-6">
+                    <motion.div
+                      className={`w-16 h-16 bg-gradient-to-r ${skill.color} rounded-2xl flex items-center justify-center text-2xl shadow-lg`}
+                      whileHover={{ scale: 1.1, rotate: 10 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      {skill.icon}
+                    </motion.div>
+                    <div className="flex-1 space-y-4">
+                      <div>
+                        <h4 className="text-2xl font-bold text-slate-800 mb-2">
+                          {skill.title}
+                        </h4>
+                        <div className={`inline-flex items-center px-3 py-1 bg-gradient-to-r ${skill.bgColor} rounded-full`}>
+                          <span className="text-sm font-medium text-slate-700">{skill.stats}</span>
+                        </div>
+                      </div>
+                      <p className="text-slate-600 leading-relaxed">
+                        {skill.description}
+                      </p>
+                    </div>
+                  </div>
+                  <div className={`absolute inset-0 bg-gradient-to-r ${skill.color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`}></div>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
 
-          {/* Skills Grid */}
-          <motion.div className="grid md:grid-cols-2 gap-8" variants={itemVariants}>
-            {skills.map((skill, index) => (
-              <motion.div
-                key={skill.title}
-                className="glass-effect p-8 rounded-2xl card-hover group"
-                whileHover={{ y: -5 }}
-                variants={itemVariants}
-              >
-                <div className="flex items-start space-x-4">
-                  <div className={`w-16 h-16 bg-gradient-to-r ${skill.color} rounded-xl flex items-center justify-center text-2xl shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                    {skill.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="text-xl font-semibold text-slate-800 mb-3">
-                      {skill.title}
+          {/* Technical Skills */}
+          <motion.div className="space-y-12" variants={itemVariants}>
+            <h3 className="text-3xl font-bold text-center text-slate-800 mb-8">
+              Technical Proficiency
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {technicalSkills.map((category, index) => (
+                <motion.div
+                  key={category.category}
+                  className="glass-effect p-6 rounded-2xl card-hover"
+                  variants={skillCardVariants}
+                  whileHover={{ y: -10 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="text-center mb-6">
+                    <motion.div
+                      className={`w-14 h-14 bg-gradient-to-r ${category.color} rounded-xl flex items-center justify-center text-2xl mx-auto mb-4 shadow-lg`}
+                      whileHover={{ scale: 1.1, rotate: 10 }}
+                    >
+                      {category.icon}
+                    </motion.div>
+                    <h4 className="text-xl font-bold text-slate-800">
+                      {category.category}
                     </h4>
-                    <p className="text-slate-600 leading-relaxed">
-                      {skill.description}
-                    </p>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="space-y-2">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skill}
+                        className="skill-tag"
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: skillIndex * 0.05 }}
+                      >
+                        {skill}
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </motion.div>
 
-          {/* Additional Skills */}
-          <motion.div variants={itemVariants}>
-            <div className="glass-effect p-8 rounded-2xl text-center">
-              <h3 className="text-2xl font-semibold text-slate-800 mb-6">
-                Additional Skills
-              </h3>
-              <div className="flex flex-wrap justify-center gap-4">
-                {[
-                  "Team Leadership", "Problem Solving", "Communication",
-                  "Time Management", "Adaptability", "Creativity",
-                  "Critical Thinking", "Collaboration"
-                ].map((skill, index) => (
-                  <motion.span
-                    key={skill}
-                    className="px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 rounded-full font-medium"
-                    whileHover={{ scale: 1.05 }}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    {skill}
-                  </motion.span>
-                ))}
-              </div>
+          {/* Soft Skills with Progress Bars */}
+          <motion.div className="glass-effect p-12 rounded-3xl" variants={itemVariants}>
+            <h3 className="text-3xl font-bold text-center text-slate-800 mb-12">
+              Core Competencies
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {softSkills.map((skill, index) => (
+                <motion.div
+                  key={skill.name}
+                  className="space-y-4"
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-3">
+                      <span className="text-xl">{skill.icon}</span>
+                      <span className="font-semibold text-slate-800">{skill.name}</span>
+                    </div>
+                    <span className="text-sm font-bold text-blue-600">{skill.level}%</span>
+                  </div>
+                  <div className="relative">
+                    <div className="w-full bg-slate-200 rounded-full h-3">
+                      <motion.div
+                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full shadow-sm"
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${skill.level}%` }}
+                        transition={{ duration: 1, delay: index * 0.1 }}
+                      />
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
             </div>
+          </motion.div>
+
+          {/* Call to Action */}
+          <motion.div
+            className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white"
+            variants={itemVariants}
+          >
+            <h3 className="text-3xl font-bold mb-6">Ready to Collaborate?</h3>
+            <p className="text-xl mb-8 text-blue-100">
+              Let's combine these skills to create something extraordinary together.
+            </p>
+            <motion.button
+              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Get In Touch
+              <i className="fas fa-arrow-right ml-2"></i>
+            </motion.button>
           </motion.div>
         </motion.div>
       </div>
