@@ -93,15 +93,6 @@ const Skills = () => {
     },
   ];
 
-  const softSkills = [
-    { name: "Leadership", level: 95, icon: "👑" },
-    { name: "Problem Solving", level: 92, icon: "🧩" },
-    { name: "Communication", level: 88, icon: "💬" },
-    { name: "Teamwork", level: 90, icon: "🤝" },
-    { name: "Adaptability", level: 87, icon: "🌟" },
-    { name: "Creativity", level: 85, icon: "🎨" },
-  ];
-
   return (
     <div className="section-padding">
       <div className="container-max">
@@ -117,14 +108,13 @@ const Skills = () => {
               className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-50 to-purple-50 rounded-full border border-blue-200"
               variants={itemVariants}
             >
-              <span className="text-2xl">⚡</span>
               <span className="text-blue-700 font-semibold">Skills & Expertise</span>
             </motion.div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">
               What I Bring to the Table
             </h2>
             <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-              A unique blend of technical expertise, leadership experience, and creative problem-solving abilities 
+              A unique blend of technical expertise, leadership experience, and creative problem-solving abilities
               developed through diverse experiences in competitive sports, cultural leadership, and software development.
             </p>
           </motion.div>
@@ -212,61 +202,6 @@ const Skills = () => {
                 </motion.div>
               ))}
             </div>
-          </motion.div>
-
-          {/* Soft Skills with Progress Bars */}
-          <motion.div className="glass-effect p-12 rounded-3xl" variants={itemVariants}>
-            <h3 className="text-3xl font-bold text-center text-slate-800 mb-12">
-              Core Competencies
-            </h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {softSkills.map((skill, index) => (
-                <motion.div
-                  key={skill.name}
-                  className="space-y-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <span className="text-xl">{skill.icon}</span>
-                      <span className="font-semibold text-slate-800">{skill.name}</span>
-                    </div>
-                    <span className="text-sm font-bold text-blue-600">{skill.level}%</span>
-                  </div>
-                  <div className="relative">
-                    <div className="w-full bg-slate-200 rounded-full h-3">
-                      <motion.div
-                        className="bg-gradient-to-r from-blue-500 to-purple-500 h-3 rounded-full shadow-sm"
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ duration: 1, delay: index * 0.1 }}
-                      />
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          {/* Call to Action */}
-          <motion.div
-            className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white"
-            variants={itemVariants}
-          >
-            <h3 className="text-3xl font-bold mb-6">Ready to Collaborate?</h3>
-            <p className="text-xl mb-8 text-blue-100">
-              Let's combine these skills to create something extraordinary together.
-            </p>
-            <motion.button
-              className="bg-white text-blue-600 px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-              <i className="fas fa-arrow-right ml-2"></i>
-            </motion.button>
           </motion.div>
         </motion.div>
       </div>

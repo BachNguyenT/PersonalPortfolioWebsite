@@ -27,18 +27,6 @@ const Experiences = () => {
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    },
-  };
-
   const experiences = [
     {
       title: "Software Developer",
@@ -202,7 +190,7 @@ const Experiences = () => {
           className="space-y-16"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
+          animate="visible"
         >
           {/* Header */}
           <motion.div className="text-center space-y-6" variants={itemVariants}>
@@ -210,7 +198,6 @@ const Experiences = () => {
               className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-full border border-indigo-200"
               variants={itemVariants}
             >
-              <span className="text-2xl">💼</span>
               <span className="text-indigo-700 font-semibold">Work & Projects</span>
             </motion.div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">
@@ -237,7 +224,6 @@ const Experiences = () => {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="text-lg">{tab.icon}</span>
                   <span className="hidden sm:inline">{tab.label}</span>
                   <span className="bg-white/20 text-xs px-2 py-1 rounded-full">
                     {tab.count}
@@ -262,7 +248,9 @@ const Experiences = () => {
                   <motion.div
                     key={exp.title}
                     className="grid lg:grid-cols-3 gap-8 glass-effect p-8 rounded-3xl floating-card"
-                    variants={cardVariants}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ scale: 1.01 }}
                   >
                     {/* Header Section */}
@@ -299,7 +287,6 @@ const Experiences = () => {
                     {/* Key Achievements */}
                     <div className="space-y-4">
                       <h4 className="text-lg font-bold text-slate-800 flex items-center gap-2">
-                        <span className="text-xl">📊</span>
                         Key Achievements
                       </h4>
                       <div className="grid grid-cols-2 gap-3">
@@ -319,7 +306,6 @@ const Experiences = () => {
                     {/* Technologies */}
                     <div className="space-y-4">
                       <h4 className="text-lg font-bold text-slate-800 flex items-center gap-2">
-                        <span className="text-xl">🛠️</span>
                         Technologies
                       </h4>
                       <div className="flex flex-wrap gap-2">
@@ -329,7 +315,7 @@ const Experiences = () => {
                             className="skill-tag"
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: techIndex * 0.1 }}
+                            transition={{ delay: (index * 0.1) + (techIndex * 0.05) + 0.4 }}
                           >
                             {tech}
                           </motion.span>
@@ -340,7 +326,6 @@ const Experiences = () => {
                     {/* Responsibilities */}
                     <div className="space-y-4">
                       <h4 className="text-lg font-bold text-slate-800 flex items-center gap-2">
-                        <span className="text-xl">✨</span>
                         Key Responsibilities
                       </h4>
                       <ul className="space-y-2">
@@ -350,7 +335,7 @@ const Experiences = () => {
                             className="flex items-start gap-3 text-slate-600"
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
-                            transition={{ delay: bulletIndex * 0.1 }}
+                            transition={{ delay: (index * 0.1) + (bulletIndex * 0.05) + 0.3 }}
                           >
                             <span className="text-blue-500 mt-1">•</span>
                             <span>{bullet}</span>
@@ -376,7 +361,9 @@ const Experiences = () => {
                   <motion.div
                     key={project.title}
                     className="group floating-card glass-effect p-8 rounded-3xl border border-white/20"
-                    variants={cardVariants}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ scale: 1.02, rotateY: 2 }}
                     style={{ transformStyle: "preserve-3d" }}
                   >

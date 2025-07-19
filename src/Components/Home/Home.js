@@ -68,7 +68,7 @@ const Home = () => {
                 className="text-xl sm:text-2xl font-medium text-slate-600 tracking-wide"
                 variants={itemVariants}
               >
-                👋 Hello, I'm
+                Hello, I'm
               </motion.p>
               <motion.h1
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text text-shadow"
@@ -97,7 +97,7 @@ const Home = () => {
 
             <motion.div className="space-y-4 text-lg text-slate-600 leading-relaxed" variants={itemVariants}>
               <p>
-                🎓 Honours Bachelor of Software Engineering @{" "}
+                Honours Bachelor of Software Engineering @{" "}
                 <a
                   href="https://www.rmit.edu.vn"
                   className="text-blue-600 hover:text-blue-700 font-semibold transition-colors duration-200 underline decoration-blue-300 hover:decoration-blue-500"
@@ -106,27 +106,25 @@ const Home = () => {
                 >
                   RMIT Vietnam
                 </a>
-                <span className="ml-2 text-slate-500 font-medium">(Sep 2023 – May 2027)</span>
+                <span className="ml-2 text-slate-500 font-medium">(Sep 2023 – Present)</span>
               </p>
               <p className="text-slate-700">
-                🚀 Passionate about building{" "}
-                <span className="font-semibold text-blue-600">scalable, performant web applications</span>{" "}
-                and AI solutions. Experienced in React, Next.js, Tailwind CSS, and modern web technologies.
+                Passionate about building{" "}
+                <span className="font-semibold text-blue-600">scalable, performant web</span>{" "}
+                solutions. Experienced in React, Next.js, Tailwind CSS, Express.js and modern web technologies.
               </p>
             </motion.div>
-
-            /* Stats */
-                  <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4" variants={itemVariants}>
-                    {stats.map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      className="text-center p-4 glass-effect rounded-2xl card-hover flex flex-col items-center justify-center"
-                      whileHover={{ scale: 1.05 }}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.5 + index * 0.1 }}
-                    >
-                      {/* <div className="text-2xl mb-2">{stat.icon}</div> */}
+            <motion.div className="grid grid-cols-2 sm:grid-cols-4 gap-4" variants={itemVariants}>
+              {stats.map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  className="text-center p-4 glass-effect rounded-2xl card-hover flex flex-col items-center justify-center"
+                  whileHover={{ scale: 1.05 }}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                >
+                  {/* <div className="text-2xl mb-2">{stat.icon}</div> */}
                   <div className="text-4xl font-bold gradient-text">{stat.number}</div>
                   <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
                 </motion.div>
@@ -152,17 +150,16 @@ const Home = () => {
                 </motion.a>
               ))}
             </motion.div>
-
-            {/* CTA Buttons */}
             <motion.div className="flex flex-wrap gap-4 pt-6" variants={itemVariants}>
-              <motion.button
+              <motion.a
                 className="btn-primary flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
+                href="https://github.com/BachNguyenT"
               >
                 <span>View My Work</span>
                 <i className="fas fa-arrow-right"></i>
-              </motion.button>
+              </motion.a>
               <motion.button
                 className="btn-secondary flex items-center gap-3"
                 whileHover={{ scale: 1.05 }}
@@ -195,7 +192,7 @@ const Home = () => {
                 animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
                 transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               />
-              
+
               {/* Main Avatar Container */}
               <div className="relative p-8">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-full blur-3xl"></div>

@@ -18,11 +18,12 @@ const NavBar = () => {
   }, []);
 
   const navItems = [
-    { name: "Home", to: "Home", icon: "🏠" },
-    { name: "About", to: "About", icon: "👤" },
-    { name: "Skills", to: "Skills", icon: "⚡" },
-    { name: "Experiences", to: "Experiences", icon: "💼" },
-    { name: "Contact", to: "Contact", icon: "📧" },
+    { name: "Home", to: "Home" },
+    { name: "About", to: "About" },
+    { name: "Experiences", to: "Experiences" },
+    { name: "Leadership", to: "Leadership" },
+    { name: "Awards", to: "Awards" },
+    { name: "Contact", to: "Contact" },
   ];
 
   const handleNavClick = () => {
@@ -192,7 +193,6 @@ const NavBar = () => {
                         onClick={handleNavClick}
                         onSetActive={handleSetActive}
                       >
-                        <span className="text-xl">{item.icon}</span>
                         <span>{item.name}</span>
                         <i className="fas fa-arrow-right ml-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"></i>
                       </Link>

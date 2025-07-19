@@ -48,8 +48,9 @@ const Footer = () => {
   const navItems = [
     { name: "Home", to: "Home", icon: "🏠" },
     { name: "About", to: "About", icon: "👤" },
-    { name: "Skills", to: "Skills", icon: "⚡" },
     { name: "Experiences", to: "Experiences", icon: "💼" },
+    { name: "Leadership", to: "Leadership", icon: "👥" },
+    { name: "Awards", to: "Awards", icon: "🏆" },
     { name: "Contact", to: "Contact", icon: "📧" },
   ];
 
@@ -219,7 +220,7 @@ const Footer = () => {
                         duration={700}
                         className="group flex items-center gap-3 p-3 text-slate-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-300 cursor-pointer"
                       >
-                        <span className="text-lg">{item.icon}</span>
+                        {/* <span className="text-lg">{item.icon}</span> */}
                         <span className="font-medium">{item.name}</span>
                         <i className="fas fa-arrow-right text-xs opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 ml-auto"></i>
                       </Link>
@@ -231,7 +232,7 @@ const Footer = () => {
               {/* Contact & CTA */}
               <motion.div className="space-y-6" variants={itemVariants}>
                 <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                  <span className="text-2xl">🚀</span>
+                  {/* <span className="text-2xl">🚀</span> */}
                   Let's Work Together
                 </h3>
                 
@@ -302,7 +303,7 @@ const Footer = () => {
             >
               <div className="text-center lg:text-left space-y-2">
                 <p className="text-slate-400 font-medium">
-                  Designed & Developed with ❤️ by Bach Nguyen
+                  Designed & Developed by Bach Nguyen
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-2 text-slate-500 text-sm">
                   <span className="px-2 py-1 bg-slate-700 rounded">React.js</span>
@@ -320,7 +321,6 @@ const Footer = () => {
                   <p className="font-medium">© {currentYear} Bach Nguyen</p>
                   <p className="text-sm">All rights reserved</p>
                 </div>
-                <div className="text-3xl">🌟</div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -344,12 +344,30 @@ const Footer = () => {
           duration={700}
           className="group w-14 h-14 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-2xl transition-all duration-300 cursor-pointer"
         >
-          <motion.i
-            className="fas fa-arrow-up text-lg"
+          <motion.div
+            className="w-6 h-6 flex items-center justify-center"
             whileHover={{ y: -2 }}
             animate={{ y: [0, -2, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-          />
+          >
+            {/* Custom SVG Arrow Icon */}
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-white"
+            >
+              <path
+                d="M12 19V5M5 12L12 5L19 12"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </motion.div>
           
           {/* Tooltip */}
           <div className="absolute bottom-full mb-2 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-slate-900 text-white text-sm rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">

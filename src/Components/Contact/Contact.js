@@ -184,7 +184,6 @@ const Contact = () => {
               className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-50 to-blue-50 rounded-full border border-green-200"
               variants={itemVariants}
             >
-              <span className="text-2xl">📧</span>
               <span className="text-green-700 font-semibold">Get In Touch</span>
             </motion.div>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold gradient-text">
@@ -230,7 +229,6 @@ const Contact = () => {
               <div className="glass-effect p-8 rounded-3xl">
                 <div className="mb-8">
                   <h3 className="text-2xl font-bold text-slate-800 mb-4 flex items-center gap-3">
-                    <span className="text-3xl">✉️</span>
                     Send me a message
                   </h3>
                   <p className="text-slate-600">
@@ -344,7 +342,6 @@ const Contact = () => {
               {/* Quick Actions */}
               <div className="glass-effect p-6 rounded-3xl">
                 <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                  <span className="text-2xl">⚡</span>
                   Quick Actions
                 </h3>
                 <div className="space-y-4">
@@ -377,7 +374,6 @@ const Contact = () => {
               {/* Social Links */}
               <div className="glass-effect p-6 rounded-3xl">
                 <h3 className="text-xl font-bold text-slate-800 mb-6 flex items-center gap-3">
-                  <span className="text-2xl">🌐</span>
                   Connect With Me
                 </h3>
                 <div className="grid grid-cols-2 gap-3">
@@ -391,7 +387,6 @@ const Contact = () => {
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
                     >
-                      <i className={social.icon}></i>
                       <span className="hidden sm:inline">{social.name}</span>
                     </motion.a>
                   ))}
@@ -401,7 +396,6 @@ const Contact = () => {
               {/* Availability Status */}
               <div className="glass-effect p-6 rounded-3xl">
                 <h3 className="text-xl font-bold text-slate-800 mb-4 flex items-center gap-3">
-                  <span className="text-2xl">🟢</span>
                   Availability
                 </h3>
                 <div className="space-y-3">
@@ -439,7 +433,6 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <i className="fas fa-envelope"></i>
                 <span>Send Email</span>
               </motion.a>
               <motion.a
@@ -450,7 +443,6 @@ const Contact = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <i className="fab fa-linkedin"></i>
                 <span>Connect on LinkedIn</span>
               </motion.a>
             </div>

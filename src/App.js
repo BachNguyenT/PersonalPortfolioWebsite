@@ -3,11 +3,12 @@ import { React } from "react";
 import NavBar from "./components/NavBar/NavBar";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Skills from "./components/Skills/Skills";
+import Leadership from "./components/Leadership/Leadership";
 import Experiences from "./components/Experiences/Experiences";
+import Awards from "./components/Awards/Awards";
 import Contact from "./components/Contact/Contact";
 import Footer from "./components/Footer/Footer";
-// import Connect from "./Components/Connect/Connect";
+// import Connect from "./components/Connect/Connect";
 import { Element } from "react-scroll";
 
 const App = () => {
@@ -31,8 +32,11 @@ const App = () => {
         <Element name="Experiences" className="min-h-screen bg-gradient-to-br from-purple-50/50 to-blue-50/50 backdrop-blur-sm">
           <Experiences />
         </Element>
-        <Element name="Skills" className="min-h-screen">
-          <Skills />
+        <Element name="Leadership" className="min-h-screen bg-gradient-to-br from-blue-50/50 to-purple-50/50 backdrop-blur-sm">
+          <Leadership />
+        </Element>
+        <Element name="Awards" className="min-h-screen bg-gradient-to-br from-indigo-50/50 to-blue-50/50 backdrop-blur-sm">
+          <Awards />
         </Element>
         <Element name="Contact" className="min-h-screen">
           <Contact />
